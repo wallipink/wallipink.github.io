@@ -1,90 +1,128 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wallpaper Store</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f1f3f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 50px;
-            justify-content: center;
-        }
-        .wallpaper-box {
-            width: 300px;
-            border-radius: 20px;
-            overflow: hidden;
-            background: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .wallpaper-box img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-        }
-        .wallpaper-info {
-            padding: 15px;
-        }
-        .wallpaper-info h3 {
-            margin: 0;
-            font-size: 18px;
-color: black;
-            
-        }
-        .wallpaper-info p {
-            font-size: 14px;
-            color: gray;
-        }
-        
-.price-tag {
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 10px;
-            font-size: 14px;
-            display: inline-block;
-            margin-top: 5px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wallpaper Vault</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #f9fafb;
+      color: #111827;
+    }
+
+    header {
+      background: linear-gradient(135deg, #000000, #000000);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .wallpaper {
+      position: relative;
+      border-radius: 40px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .wallpaper:hover {
+      transform: scale(1.02);
+    }
+
+    .wallpaper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 24px;
+      background-color: white;
+      color: #1e3a8a;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .cta:hover {
+      background-color: #f3f4f6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #6b7280;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <a href="#" class="wallpaper-box">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidLFnDzMo5MQNvVaXDk3HQjmO_kwPE3lJU9Hp6GPpzfolUaTGVRjYuoVPqPCvDuaS9eVh2g32kN87jFNCBw3R5dENP1FT1jG6mvRX88TavDc_fyuEv6j3hiRk0HYaDWnYuazzrLKM1xiUmTY3pcKlqRcciijfDgN-mU7467TADUNOGR-Roozlj8LID/s1080/Adobe_Express_20240504_1529390_1.png" alt="Wallpaper Preview">
-            <div class="wallpaper-info">
-                <h3>Ripple – Wallpaper Pack</h3>
-                <p>A pack of 40 wallpapers in different colors.</p>
- <div class="price-tag">$4.99</div>
-            </div>
-        </a>
-        <a href="#" class="wallpaper-box">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVa2jM3ju25g9m0ASy0-lXhXW1j5RMamWh70oZec0KqjyEJSoDb0P_HKKNs1pZHNvCDYCe0nKEZ11A93i42n7dMfF0w-KAeR0h0u8WhlcWLcFdb0rn4cP8jCopnVm7ZmkzKGODqUpKweWBJXk9nj7mR5LQpCwV2iCKWgRkDvcnSzNL3_QHin8EuG2X/s1080/Adobe_Express_20240510_2200570_1.png" alt="Wallpaper Preview">
-            <div class="wallpaper-info">
-                <h3>Serenity – Minimal Pack</h3>
-                <p>Minimalist wallpapers for a clean look.</p>
-                 <div class="price-tag">$4.99</div>
-            </div>
-        </a>
-        <a href="#" class="wallpaper-box">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVa2jM3ju25g9m0ASy0-lXhXW1j5RMamWh70oZec0KqjyEJSoDb0P_HKKNs1pZHNvCDYCe0nKEZ11A93i42n7dMfF0w-KAeR0h0u8WhlcWLcFdb0rn4cP8jCopnVm7ZmkzKGODqUpKweWBJXk9nj7mR5LQpCwV2iCKWgRkDvcnSzNL3_QHin8EuG2X/s1080/Adobe_Express_20240510_2200570_1.png" alt="Wallpaper Preview">
-            <div class="wallpaper-info">
-                <h3>Nature Bliss</h3>
-                <p>High-resolution nature wallpapers.</p>
-                 <div class="price-tag">$4.99</div>
-            </div>
-        </a>
+
+  <header>
+    <h1>Pinkwalli</h1>
+    <p>Explore high-quality wallpapers curated for your screens</p>
+    <a href="#gallery" class="cta">Browse Collection</a>
+  </header>
+
+  <div class="gallery" id="gallery">
+    <!-- Sample Wallpapers -->
+    <div class="wallpaper">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhf_8WEs5b67kZW2i5I0NtJVArVKfzCsvY50h5eF6aJ2KT3GwUYT2Dq4TkGSOVQkqi4UD-fYjOmHgMy4oB4xAZ0-Z8tIQ4wdHPuQCWrnP7sBLQG2TYnrc2fqjZCyv9hJrlx1k6jP3x58l6N4O4Of6JzTx30BUffZRTmQUUkENXypEMWfQh14E9_OuBx/s1080/Adobe_Express_20240511_2208170_1.png" alt="Wallpaper 1" />
     </div>
+    <div class="wallpaper">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZqVuHDrPNaRkuqnE1Ec71PnG1Tetuj4346lEqacHDUJ-clESOdhHfQymWN8sLOzpP3BulS2jzHZmXsWFMF-OQBJUF0zqWUvzVLrMXKZSaQSHWTAVPxhVH4m8JykT2YDY9Utgb0dJVfhKjz2up9DX1hj_En2-5jlhgvMKZLzzHGUeCMUJ9ZWm46m1p/s1080/Adobe_Express_20240511_2218480_1.png" alt="Wallpaper 2" />
+    </div>
+    <div class="wallpaper">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDPB84V8z5N3UEMBvXuaBhMMtGkfLCk_iE1bd5HlP3e4uc2AjHUL2D5bBXgEoBG0wsLdt1cry6BhKM8NtUVa8rQLxmD_E9cRt22otK28zllYF3pXsY7O3gI5w-uP2pwmMYAip1_4KEpoLGjDvL8P9eBQh5_bp44ZKmaZvCvJHC5CTmCqYYa_oLykZJ/s1080/Adobe_Express_20240511_2235130_1.png" alt="Wallpaper 3" />
+    </div>
+    <div class="wallpaper">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhh3xtuiEbc4hUiZPzza2EpMHfWG9CpwOrk3T4g9zCfUd2k-Y2heL56BTiI5etPTj2YRIJVINgQPp0MZLIgLpNNNZnDs7v5QPWwd3PB65tWeJRZkfH2hjx_UwyBOT81K7Pn-9Vp_7L-ZGqAvxTUcdl79i2WI7zpB5bJHRRljadyZ0Cj0ixPpjIC9LpP/s1080/Adobe_Express_20240511_2214270_1.png" alt="Wallpaper 4" />
+    </div>
+    <div class="wallpaper">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-RfHc33oGqywh_ttyp5rS2fyA77o-vw3dJvKfMmlZ0-urFu9ShO3lirELgLUZMzhAqU9wev_T34ASaUq8c6Px80-9Qh3XJf229ZVEoKpC9tw3XRcO2B75AaNTib6UK_HtBz9VsGc0AOM83n7CH6ZnHF_v4AXWOCHShcYKLGo30xYR9_eyM8XQCpz-f_lY/s1080/Adobe_Express_20250127_0102520_1_010921.png" alt="Wallpaper 5" />
+    </div>
+    <div class="wallpaper">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbVJ9Ml_Uyq0Nv4Y3rdB8ameYV5QbiXJz0e9HhUTLbUTZLbC_5jp9ocuWzlkAs3kcnHy6xEdgZSbJ49Vzhm2QcvUZaTpzccCKMhPzk9oaha6MpNaeboggIVgXr3s5AzqBqqEtCEYBEB0TfZ7m3S9_xw9o6ysjPIEmpCmUcoyWkxhxEgXvUvPlhefkPQy0D/s1080/Adobe_Express_20250127_0107100_1_010925.png" alt="Wallpaper 6" />
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Pinkwalli. All rights reserved.
+  </footer>
+
 </body>
 </html>
