@@ -96,45 +96,47 @@
   </div>
 
   <script>
-    // 🔧 Replace this with your own Firebase config:
+    // 🔧 Your Firebase config:
     const firebaseConfig = {
-        apiKey: "AIzaSyBH6hhP7-JUZJdTirFGA-6W9_unIC1k6Lo",
-        authDomain: "newpro-fa54b.firebaseapp.com",
-        projectId: "newpro-fa54b",
-        storageBucket: "newpro-fa54b.firebasestorage.app",
-        messagingSenderId: "541759932178",
-        appId: "1:541759932178:web:4b3feedfbb5a10b33e55cb",
-        measurementId: "G-80WLB8K079"
+      apiKey: "AIzaSyBH6hhP7-JUZJdTirFGA-6W9_unIC1k6Lo",
+      authDomain: "newpro-fa54b.firebaseapp.com",
+      projectId: "newpro-fa54b",
+      storageBucket: "newpro-fa54b.firebasestorage.app",
+      messagingSenderId: "541759932178",
+      appId: "1:541759932178:web:4b3feedfbb5a10b33e55cb",
+      measurementId: "G-80WLB8K079"
     };
 
-    // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
 
-    // Sign-up logic
     const form = document.getElementById("signupForm");
     const errorMsg = document.getElementById("errorMsg");
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      const email = document.getElementById("email").value;
+      const email = document.getElementById("email").value.trim();
       const password = document.getElementById("password").value;
 
-      // Check if password is less than 6 characters
+      // 🔒 Password too short
       if (password.length < 6) {
         errorMsg.textContent = "Password is too short. It must be at least 6 characters long.";
-        return; // Stop the form from submitting
+        return;
       }
 
-      // Create user with email and password
+      // 🔐 Firebase signup
       auth.createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
-          // ✅ Success
+          // ✅ Success: redirect
           window.location.href = "download.html";
         })
         .catch((error) => {
-          // ❌ Firebase error (e.g., email already in use)
-          errorMsg.textContent = error.message;
+          // ❌ Firebase error handling
+          if (error.code === "auth/email-already-in-use") {
+            errorMsg.textContent = "This email is already in use, try login.";
+          } else {
+            errorMsg.textContent = error.message;
+          }
         });
     });
   </script>
