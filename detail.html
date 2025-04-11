@@ -6,6 +6,7 @@
     body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
+      padding: 0;
     }
 
     * {
@@ -21,6 +22,7 @@
       max-width: 800px;
       margin: 0 auto;
       width: 100%;
+      padding: 20px; /* Adding padding to prevent text from touching the screen edge */
     }
 
     .mySlides {
@@ -86,6 +88,8 @@
 
     .demo {
       opacity: 0.6;
+      width: 70%; /* Reduce the size of the preview images */
+      margin: 0 auto;
     }
 
     .active,
@@ -97,6 +101,14 @@
       .column {
         width: 33.33%;
       }
+      .demo {
+        width: 100%; /* Adjusting for mobile devices */
+      }
+    }
+
+    /* Adding padding to text elements */
+    .text-content {
+      padding: 20px;
     }
   </style>
 
@@ -181,9 +193,11 @@
 
     <!-- Descriptive Text -->
     <br><br>
-    <p style="font-family: 'Montserrat', sans-serif; color: #000;">
-      Here is Shadow wallpaper pack for you. Shadow wallpaper pack is a premium pack created by Pinkwalli. This papers pack has a variety of wallpapers. So do have it right now on your homescreen.
-    </p>
+    <div class="text-content">
+      <p>
+        Here is Shadow wallpaper pack for you. Shadow wallpaper pack is a premium pack created by Pinkwalli. This papers pack has a variety of wallpapers. So do have it right now on your homescreen.
+      </p>
+    </div>
 
     <!-- Ko-fi Button -->
     <script src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
@@ -195,23 +209,25 @@
     <br><br>
 
     <!-- Instagram Credit -->
-    <p style="font-family: 'Montserrat', sans-serif; font-size: medium; color: #000;">
-      If you liked this wallpaper pack then please tag
-      <a href="https://instagram.com/pinkwalli" target="_blank" style="color: #000;">@Pinkwalli</a>
-      on Instagram with pictures of these wallpapers in use!
-    </p>
+    <div class="text-content">
+      <p>
+        If you liked this wallpaper pack then please tag
+        <a href="https://instagram.com/pinkwalli" target="_blank" style="color: #000;">@Pinkwalli</a>
+        on Instagram with pictures of these wallpapers in use!
+      </p>
+    </div>
 
     <!-- License Section -->
-    <h2 style="font-family: 'Montserrat', sans-serif; color: #000;">License</h2>
-    <p style="font-family: 'Montserrat', sans-serif; color: #000;">
-      This content is made by ©Pinkwalli.
-    </p>
+    <div class="text-content">
+      <h2>License</h2>
+      <p>This content is made by ©Pinkwalli.</p>
 
-    <h2 style="font-family: 'Montserrat', sans-serif; color: #000;">Rights</h2>
-    <ul style="font-family: 'Montserrat', sans-serif; color: #000;">
-      <li>You can use wallpapers only for personal use.</li>
-      <li>You do not have rights to redistribute, resell, lease, license, sub-license or offer this resource to any third party.</li>
-    </ul>
+      <h2>Rights</h2>
+      <ul>
+        <li>You can use wallpapers only for personal use.</li>
+        <li>You do not have rights to redistribute, resell, lease, license, sub-license or offer this resource to any third party.</li>
+      </ul>
+    </div>
 
   </body>
 </html>
