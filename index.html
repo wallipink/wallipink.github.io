@@ -4,21 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wallpaper Vault</title>
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
+  <style>
     body {
       font-family: 'Quicksand', sans-serif;
       background-color: #f9fafb;
       color: #111827;
+      margin: 0;
+      padding: 0;
     }
 
     header {
@@ -30,26 +26,38 @@
 
     header h1 {
       font-size: 36px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
+    /* Only change this part to adjust subtitle */
     header p {
-      font-size: 18px;
-      opacity: 0.9;
+      font-size: 15px;        /* Adjust font size here */
+      font-family: 'Montserrat', sans-serif;  /* Change font family here */
+      margin-bottom: 30px;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: white;
+      color: #1e3a8a;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
     }
 
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
       padding: 40px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
     }
 
     .wallpaper {
-      position: relative;
-      border-radius: 40px;
+      width: 350px;           /* Change box width here */
+      height: 350px;          /* Change box height here */
+      border-radius: 24px;
       overflow: hidden;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
@@ -63,23 +71,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
-    }
-
-    .cta {
-      display: inline-block;
-      margin-top: 24px;
-      padding: 12px 24px;
-      background-color: white;
-      color: #1e3a8a;
-      font-weight: 600;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-
-    .cta:hover {
-      background-color: #f3f4f6;
     }
 
     footer {
@@ -94,10 +85,11 @@
 
   <header>
     <h1>Pinkwalli</h1>
-    <p>Explore high-quality wallpapers curated for your screens</p>
+    <p>Explore high-quality wallpapers packs curated for your screens</p>
     <a href="#gallery" class="cta">Browse Collection</a>
   </header>
 
+  
   <div class="gallery" id="gallery">
     <!-- Sample Wallpapers -->
     <div class="wallpaper">
@@ -121,7 +113,7 @@
   </div>
 
   <footer>
-    &copy; 2025 Pinkwalli. All rights reserved.
+    &copy; 2025 Wallpaper Vault. All rights reserved.
   </footer>
 
 </body>
