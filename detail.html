@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadow Wallpaper Pack by Pinkwalli</title>
+  <style>
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+      margin: 0;
+      background-color: #111;
+      color: white;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    img {
+      vertical-align: middle;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .cursor {
+      cursor: pointer;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.3s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    .caption-container {
+      text-align: center;
+      background-color: #000;
+      padding: 8px 16px;
+      color: white;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .column {
+      flex: 1 0 22%;
+      margin: 5px;
+      max-width: 150px;
+    }
+
+    .column img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .demo {
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+
+    @media screen and (max-width: 600px) {
+      .prev, .next {
+        font-size: 14px;
+        padding: 12px;
+      }
+      .column {
+        flex: 1 0 45%;
+      }
+    }
+
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Slides -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-RfHc33oGqywh_ttyp5rS2fyA77o-vw3dJvKfMmlZ0-urFu9ShO3lirELgLUZMzhAqU9wev_T34ASaUq8c6Px80-9Qh3XJf229ZVEoKpC9tw3XRcO2B75AaNTib6UK_HtBz9VsGc0AOM83n7CH6ZnHF_v4AXWOCHShcYKLGo30xYR9_eyM8XQCpz-f_lY/s1080/Adobe_Express_20250127_0102520_1_010921.png" />
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8ndaXFUAYBw8idGnVKnXJp9yaHOSr4Lh0VoI9PpC4oWbAzCqukzSpstr_FMLOZJm94y6F3IFZ8VBXb7zTl2S07gOCLHZt8SKVrdxhztIFwHcXjWSmVco3B4tcX_kwECdm3_tVpzD8Wa_hKpKBw8jqmYEs0dQM7G4YRSF0VHLrop8NdPHSU_0yfdCbujzM/s1080/Adobe_Express_20250127_0105020_1_010923.png" />
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwxubNs7Rn5p8WWqnMCu9aq7qR44pZ1Hog3EiD1ZQJ3WibH7pfLFkkxSd9X8LmLRTPPKLJzjv0z6eTkPZKHONatKpiBzeb7Suv298DfQbs7dkubWard6jKJHmnRGxtN5GDsg6HPLYYyp4k6tzB8FN138JZSQYQx2pVGNAPP1FU4b13N1uVrvM42edyXzuE/s1080/Adobe_Express_20250127_0101010_1_010918.png" />
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbVJ9Ml_Uyq0Nv4Y3rdB8ameYV5QbiXJz0e9HhUTLbUTZLbC_5jp9ocuWzlkAs3kcnHy6xEdgZSbJ49Vzhm2QcvUZaTpzccCKMhPzk9oaha6MpNaeboggIVgXr3s5AzqBqqEtCEYBEB0TfZ7m3S9_xw9o6ysjPIEmpCmUcoyWkxhxEgXvUvPlhefkPQy0D/s1080/Adobe_Express_20250127_0107100_1_010925.png" />
+  </div>
+
+  <!-- Arrows -->
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <!-- Caption -->
+  <div class="caption-container">
+    <p id="caption">Shadow Wallpaper Pack</p>
+  </div>
+
+  <!-- Thumbnails -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-RfHc33oGqywh_ttyp5rS2fyA77o-vw3dJvKfMmlZ0-urFu9ShO3lirELgLUZMzhAqU9wev_T34ASaUq8c6Px80-9Qh3XJf229ZVEoKpC9tw3XRcO2B75AaNTib6UK_HtBz9VsGc0AOM83n7CH6ZnHF_v4AXWOCHShcYKLGo30xYR9_eyM8XQCpz-f_lY/s1080/Adobe_Express_20250127_0102520_1_010921.png" onclick="currentSlide(1)" alt="Shadow Wallpaper 1">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8ndaXFUAYBw8idGnVKnXJp9yaHOSr4Lh0VoI9PpC4oWbAzCqukzSpstr_FMLOZJm94y6F3IFZ8VBXb7zTl2S07gOCLHZt8SKVrdxhztIFwHcXjWSmVco3B4tcX_kwECdm3_tVpzD8Wa_hKpKBw8jqmYEs0dQM7G4YRSF0VHLrop8NdPHSU_0yfdCbujzM/s1080/Adobe_Express_20250127_0105020_1_010923.png" onclick="currentSlide(2)" alt="Shadow Wallpaper 2">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwxubNs7Rn5p8WWqnMCu9aq7qR44pZ1Hog3EiD1ZQJ3WibH7pfLFkkxSd9X8LmLRTPPKLJzjv0z6eTkPZKHONatKpiBzeb7Suv298DfQbs7dkubWard6jKJHmnRGxtN5GDsg6HPLYYyp4k6tzB8FN138JZSQYQx2pVGNAPP1FU4b13N1uVrvM42edyXzuE/s1080/Adobe_Express_20250127_0101010_1_010918.png" onclick="currentSlide(3)" alt="Shadow Wallpaper 3">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbVJ9Ml_Uyq0Nv4Y3rdB8ameYV5QbiXJz0e9HhUTLbUTZLbC_5jp9ocuWzlkAs3kcnHy6xEdgZSbJ49Vzhm2QcvUZaTpzccCKMhPzk9oaha6MpNaeboggIVgXr3s5AzqBqqEtCEYBEB0TfZ7m3S9_xw9o6ysjPIEmpCmUcoyWkxhxEgXvUvPlhefkPQy0D/s1080/Adobe_Express_20250127_0107100_1_010925.png" onclick="currentSlide(4)" alt="Shadow Wallpaper 4">
+    </div>
+  </div>
+</div>
+
+<!-- JS Slideshow Logic -->
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  captionText.innerHTML = dots[slideIndex - 1].alt;
+}
+</script>
+
+<!-- Ko-fi Widget -->
+<script src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
+<script>
+  kofiwidget2.init('Shop on Ko-fi !', '#323B43', 's/8f489fbe12');
+  kofiwidget2.draw();
+</script>
+
+<!-- Attribution -->
+<div style="text-align:center; padding: 20px;">
+  <p>If you liked this wallpaper pack, tag <a href="https://instagram.com/pinkwalli">@Pinkwalli</a> on Instagram!</p>
+  <h3>License</h3>
+  <p>© Pinkwalli. Personal use only.</p>
+  <p>Not for redistribution, resale, or sublicensing.</p>
+</div>
+
+</body>
+</html>
